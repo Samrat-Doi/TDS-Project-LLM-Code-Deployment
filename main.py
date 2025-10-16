@@ -3,11 +3,11 @@ import requests
 import os
 import base64
 import time
-from dotenv import load_dotenv 
+#from dotenv import load_dotenv 
 import traceback
 import json
 
-load_dotenv() 
+#load_dotenv() 
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 AIPIPE_API_KEY = os.getenv("AIPIPE_API_KEY") 
@@ -339,4 +339,5 @@ async def handle_task(request: Request):
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
